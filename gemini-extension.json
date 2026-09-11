@@ -1,0 +1,11 @@
+{
+  "name": "data-parrot",
+  "version": "1.0.0",
+  "description": "Data Parrot connects to HubSpot and learns how your company sells. Its MCP server brings deal health, sales forecasting, pipeline analysis, customer health, and win/loss analysis into your AI tools.",
+  "mcpServers": {
+    "data-parrot": {
+      "type": "http",
+      "url": "https://api-v3.dataparrot.ai/api/v3/data-parrot/mcp"
+    }
+  }
+}
