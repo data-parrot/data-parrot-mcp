@@ -8,6 +8,16 @@ The GitHub repository must remain **private until Chris explicitly signs off on 
 
 The separate [Cursor/Grok Bot repository](https://github.com/data-parrot/cursor-grok-bot-mcp) is frozen. Read it for reference only; do not modify it. Its root Agent Plugin manifests do not belong here.
 
+That package was created for Cursor/Grok Bot marketplace requirements and submitted for approval. This generic repository supports other distribution channels and is the intended eventual shared home. Migration of the Cursor/Grok Bot package and retirement of the old repository are deferred until after approval and separate authorization; do not perform either as part of documentation maintenance.
+
+## Documentation structure
+
+The README is the client-neutral product and connection overview: approved descriptions, capabilities, business prompts, prerequisites, endpoint, a compact client table, permissions, verification, and support. Reuse verified product content from the frozen package with client-neutral wording. Keep HubSpot prominent.
+
+Link each client's brief setup summary to its exact existing website guide or section. Complete Cline and Gemini recipes live in `llms-install.md`, linked from the README; the installer also includes a directory of the other clients' website guides. Keep client section anchors stable and put version targets in the section body. Do not duplicate full setup recipes in the README or create per-client Markdown files solely for SEO/AEO.
+
+Verify factual claims and comparisons against current product documentation and primary provider sources. Check destination section anchors, not just HTTP status. A linked guide or valid configuration is not installation certification, marketplace acceptance, or proof of search visibility. Website/product repository changes are outside this repository's maintenance scope.
+
 ## Canonical information
 
 - Endpoint: `https://api-v3.dataparrot.ai/api/v3/data-parrot/mcp`
@@ -19,7 +29,7 @@ Use the approved short and long descriptions in the README as the marketing copy
 
 `gemini-extension.json` version `1.0.0` is this connection package's version, independent of the hosted MCP implementation and official Registry versions. Update the package version when shipping a changed extension configuration; do not change other repositories' versions. If a release tag is later authorized, keep it aligned with the package version.
 
-The current Gemini target is 0.59.0, using `type: "http"` with `url`. Cline IDE examples use `type: "streamableHttp"`, `disabled: false`, and `autoApprove: []`. Keep client examples separate and consistent across both guides. Do not add embedded credentials or auto-approval.
+The current Gemini target is 0.59.0, using `type: "http"` with `url`. Cline IDE examples use `type: "streamableHttp"`, `disabled: false`, and `autoApprove: []`. Keep the installer recipes separately labeled and consistent with the README's connection summaries. Do not add embedded credentials or auto-approval.
 
 ## Focused validation
 
@@ -28,11 +38,12 @@ Run from the repository root:
 ```bash
 python3 -m json.tool gemini-extension.json > /dev/null
 git diff --check
+git diff
 git diff --cached --check
 git diff --cached
 ```
 
-Also parse the JSON examples in both Markdown guides; verify the endpoint, client transport, and exact match between Gemini examples and the manifest's `mcpServers`. Confirm only intended package files are staged and no credentials or customer data are present. Check documentation links and the logo's PNG format and 400 × 400 dimensions.
+Also parse every JSON example in the Markdown guides (currently the two installer examples); verify the endpoint, client transport, and exact match between Gemini examples and the manifest's `mcpServers`. Review the complete working-tree diff for local reviews; inspect staged content if staging is separately authorized. Confirm only intended package files changed and no credentials or customer data are present. Check external documentation URLs and section anchors, local Markdown links, and the logo's PNG format and 400 × 400 dimensions.
 
 For public endpoint checks, follow the unauthenticated MCP challenge to protected-resource and authorization-server metadata. Do not register OAuth clients or make authenticated customer-data calls during static validation. A browser GET returning 405 is not a complete MCP health check.
 
