@@ -221,7 +221,7 @@ If the user chooses this package instead of direct configuration, run from a ter
 gemini extensions install https://github.com/data-parrot/data-parrot-mcp
 ```
 
-Git must be available. While the repository is private, the user needs repository access and working Git authentication. Let the user review the installation prompt. This downloads connection configuration, not a Data Parrot server runtime. Do not bypass prompts or enable automatic updates as part of setup.
+Git must be available and able to access this repository. If Git requires authentication, use the user's existing GitHub access. Let the user review the installation prompt. This downloads connection configuration, not a Data Parrot server runtime. Do not bypass prompts or enable automatic updates as part of setup.
 
 ### Authenticate and verify
 

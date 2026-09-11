@@ -146,7 +146,7 @@ Confirm that the client actually called a Data Parrot business tool successfully
 
 If sign-in succeeds but revenue tools are unavailable, check the returned access status: membership, paid-plan eligibility, the HubSpot connection, MCP access for your user, or workspace selection may need attention. Follow the returned setup guidance; do not change permissions or send access requests automatically.
 
-**Package review status:** this repository is private pending Chris's explicit public-release sign-off. The Gemini configuration targets CLI 0.59.0. Cline installation, Gemini installation, authenticated OAuth, workspace access, token refresh, and successful business-tool execution remain untested for this package. Linked guides and static configuration checks do not establish installation certification or marketplace availability.
+**Validation status:** the installation instructions have been checked against provider documentation. Client installation, authenticated OAuth, workspace access, token refresh, and successful business-tool execution have not been tested as part of this package review. See the [installer guide](llms-install.md) for the documentation-check date and version details.
 
 ## Support
 
