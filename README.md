@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://dataparrot.ai/brand/data-parrot-icon-400.png" alt="Data Parrot" width="112">
+  <img src="assets/data-parrot-logo-400x400.png" alt="Data Parrot" width="112">
 </p>
 
 # Data Parrot MCP for HubSpot

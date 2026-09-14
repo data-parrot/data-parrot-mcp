@@ -2,7 +2,7 @@
 
 Use this guide to connect an AI client to Data Parrot's hosted MCP server. There is no Data Parrot server package to install, build, or run locally. Use the client's native remote HTTP and OAuth support.
 
-**Documentation checked: September 11, 2026.** Each client section links to current provider documentation and the corresponding Data Parrot guide. Gemini's configuration was also checked against its latest stable release, 0.59.0. These are documentation and configuration checks: client installation, authenticated OAuth, workspace access, token refresh, and successful business-tool execution have not been tested as part of this package review.
+**Documentation checked: September 13, 2026.** Each client section links to current provider documentation and available Data Parrot guides. Configuration and OAuth instructions were also checked against Gemini CLI 0.59.0 and Cline IDE extension 4.1.17, the latest stable releases for those clients on this date. These are documentation and source-code checks: client installation, authenticated OAuth, workspace access, token refresh, and successful business-tool execution have not been tested as part of this package review.
 
 ## Choose the client
 
@@ -163,6 +163,8 @@ Sources: [xAI's MCP and CLI reference](https://docs.x.ai/build/features/mcp-serv
 
 ## Cline IDE extension
 
+These instructions target the [Cline IDE extension 4.1.17](https://github.com/cline/cline/releases/tag/v4.1.17). Cline Desktop and Cline CLI are separate clients; their release numbers and setup instructions may differ.
+
 1. Open **MCP Servers → Remote Servers** in Cline.
 2. Enter `data-parrot` and the endpoint above, choose **Streamable HTTP**, and select **Add Server**.
 3. When the server reports authentication is required, select **Authenticate** in its MCP settings. Complete browser sign-in, then [verify a real call](#check-access-and-verify-a-real-call).
@@ -182,9 +184,9 @@ For manual configuration instead, open **MCP Servers → Configure → Configure
 }
 ```
 
-Use the exact `streamableHttp` spelling. In current Cline, omitting `type` selects legacy SSE. Leave `autoApprove` empty and do not add an Authorization header; Data Parrot uses browser OAuth.
+Use the exact `streamableHttp` spelling. In Cline IDE extension 4.1.17, omitting `type` from a flat URL configuration selects legacy SSE. Leave `autoApprove` empty and do not add an Authorization header; Data Parrot uses browser OAuth.
 
-Sources: [Cline's current MCP setup and configuration reference](https://docs.cline.bot/mcp/mcp-overview) · [Cline's native OAuth flow](https://github.com/cline/cline/blob/main/apps/vscode/src/services/mcp/McpOAuthManager.ts). Data Parrot's [general connection guide](https://dataparrot.ai/docs/mcp/connect) covers service prerequisites; there is no dedicated Cline website guide yet.
+Sources: [Cline's current MCP setup and configuration reference](https://docs.cline.bot/mcp/mcp-overview) · [4.1.17 configuration schema](https://github.com/cline/cline/blob/v4.1.17/apps/vscode/src/services/mcp/schemas.ts) · [4.1.17 native OAuth flow](https://github.com/cline/cline/blob/v4.1.17/apps/vscode/src/services/mcp/McpOAuthManager.ts). Data Parrot's [general connection guide](https://dataparrot.ai/docs/mcp/connect) covers service prerequisites; there is no dedicated Cline website guide yet.
 
 ## Gemini CLI
 
