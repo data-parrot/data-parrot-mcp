@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="assets/data-parrot-logo-400x400.png" alt="Data Parrot" width="112">
-</p>
-
-# Data Parrot MCP for HubSpot
+<h1><img src="assets/data-parrot-mark-400.png" alt="Data Parrot" width="112" align="center"> Data Parrot MCP for HubSpot</h1>
 
 Data Parrot brings AI revenue analysis of your HubSpot data into your AI tools.
 
