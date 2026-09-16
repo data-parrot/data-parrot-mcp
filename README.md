@@ -10,6 +10,8 @@ Ask your AI tool about your HubSpot forecast, pipeline, deals, sales activity, c
 
 [![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/data-parrot/data-parrot-mcp)
 
+[![Data Parrot AI Revenue Analyst MCP connector – tool definition quality and endpoint health on Glama](https://glama.ai/mcp/connectors/ai.dataparrot/data-parrot/badges/score.svg)](https://glama.ai/mcp/connectors/ai.dataparrot/data-parrot)
+
 ## What is the Data Parrot MCP server?
 
 [Data Parrot](https://dataparrot.ai) is an AI revenue intelligence platform for CEOs, CROs, and revenue leaders using HubSpot. It monitors every deal, pipeline movement, and customer interaction so revenue teams can trust the forecast, catch slippage early, and focus the team where it matters.
