@@ -2,11 +2,11 @@
 
 [MCP changelog](CHANGELOG.md)
 
-Data Parrot brings AI revenue analysis of your HubSpot data into your AI tools.
+Data Parrot MCP brings AI revenue analysis of your HubSpot data into your AI tools so you can review your forecast, investigate at-risk deals, and understand pipeline changes through conversation.
 
-Data Parrot connects to HubSpot and learns how your company sells. Its MCP server brings deal health, sales forecasting, pipeline analysis, customer health, and win/loss analysis into your AI tools.
+Ask about sales activity, customer health, and why deals are won or lost. Follow up to examine individual deals, supporting activity, and the reasoning behind Data Parrot’s assessments.
 
-Ask your AI tool about your HubSpot forecast, pipeline, deals, sales activity, customer health, and win/loss using analysis Data Parrot has already completed.
+Data Parrot connects to HubSpot and learns how your company sells. Your AI tool uses analysis Data Parrot has already completed, together with supporting CRM data, to answer your questions.
 
 [Get a Data Parrot account](https://dataparrot.ai/signup) · [Visit Data Parrot](https://dataparrot.ai) · [MCP documentation](https://dataparrot.ai/docs/mcp) · [Connection guide](https://dataparrot.ai/docs/mcp/connect) · [Agent installation guide](llms-install.md) · [Prompt library](https://dataparrot.ai/docs/mcp/prompts)
 
@@ -24,9 +24,9 @@ This repository contains connection instructions and a Gemini CLI extension. The
 
 ## Why use Data Parrot with HubSpot?
 
-Your CRM has the data. Data Parrot has already analyzed how your company sells and what is happening across the sales organization, from individual deals and customers to the forecast and the reasons behind wins and losses.
+CRM has the data. Data Parrot AI gives you the truth. Data Parrot has already analyzed how your company sells and what is happening across the sales organization, from individual deals and customers to the forecast and the reasons behind wins and losses.
 
-Data Parrot uses HubSpot CRM fields alongside emails, calls, meetings, notes, property changes, transcripts, and buyer engagement when that information is available. Your CRM does not have to be perfect before you can ask a useful sales question.
+Get answers to your revenue questions without building reports or reading through emails and meeting notes yourself. Your CRM doesn't have to be perfect first.
 
 Every conversation starts with analysis Data Parrot has already done. You can ask what changed, what is at risk, and where the team needs to focus without first explaining your pipeline or asking the model to reconstruct deal history record by record.
 
@@ -46,7 +46,7 @@ See how the pipeline changed over a period and which deals caused the movement. 
 
 ### Sales activity and coaching
 
-Use activity and deal evidence to identify where reps need coaching and which deals belong in the next review. This gives leaders a concrete place to start instead of another generic activity summary.
+Use activity and deal evidence to identify where reps need coaching and which deals belong in the next review. Go into coaching conversations knowing where buyer engagement or deal progress needs attention.
 
 ### Customer health
 
@@ -54,7 +54,7 @@ Find high-value customers that need attention and review the supporting account 
 
 ### Win/loss analysis
 
-Understand why deals are won and lost using the available CRM and customer activity. Compare reasons across deals, segments, owners, competitors, and time periods without manually reading every record.
+Data Parrot analyzes why deals are won or lost so you can see what to repeat and what needs to change. Compare the reasons across deals, segments, owners, competitors, and time periods without manually reading every record.
 
 ## Questions you can ask
 
@@ -94,13 +94,13 @@ Use [HubSpot's MCP server documentation](https://developers.hubspot.com/ai-tools
 1. Data Parrot connects to HubSpot and analyzes deals, pipeline movement, sales activity, customer accounts, and won and lost business.
 2. You add the Data Parrot connection to your AI client using its setup guide below.
 3. Data Parrot asks you to sign in through your browser and choose the account you want to use.
-4. Your AI tool calls the hosted Data Parrot MCP server when a question needs revenue analysis or supporting details.
+4. Ask about your forecast, deals, or pipeline. Your AI tool uses Data Parrot's existing analysis and supporting details to answer.
 
 ### Before connecting
 
-You need a connected HubSpot account and a Data Parrot Pro or Max workspace. MCP access is included with those plans at no additional Data Parrot charge.
+You need a paid Data Parrot account on Pro or Max, with HubSpot connected. MCP access is included at no additional Data Parrot charge.
 
-New to Data Parrot? [Get a Data Parrot account](https://dataparrot.ai/signup). MCP access requires Pro or Max.
+New to Data Parrot? [Get a Data Parrot account](https://dataparrot.ai/signup).
 
 You also need access to the workspace with MCP enabled for your user. Your organization may need to allow the connection in your AI client. See the [plans and permissions FAQ](https://dataparrot.ai/docs/mcp/faq).
 

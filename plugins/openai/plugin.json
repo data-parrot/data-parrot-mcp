@@ -1,0 +1,51 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "data-parrot",
+  "version": "0.1.0",
+  "description": "Data Parrot brings AI revenue analysis of your HubSpot data into your AI tools.",
+  "author": {
+    "name": "Data Parrot",
+    "email": "support@dataparrot.ai",
+    "url": "https://dataparrot.ai"
+  },
+  "homepage": "https://dataparrot.ai/docs/mcp",
+  "repository": "https://github.com/data-parrot/data-parrot-mcp",
+  "license": "MIT",
+  "keywords": [
+    "hubspot",
+    "sales",
+    "forecasting",
+    "revenue",
+    "crm"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Data Parrot",
+        "shortDescription": "AI revenue analyst for HubSpot",
+        "longDescription": "Data Parrot brings AI revenue analysis of your HubSpot data into ChatGPT so you can review your forecast, investigate at-risk deals, and understand pipeline changes through conversation.\n\nCRM has the data. Data Parrot AI gives you the truth. Data Parrot connects to HubSpot and learns how your company sells. Every conversation starts with analysis Data Parrot has already completed, covering individual deals, customers, sales activity, forecasts, and the reasons behind wins and losses.\n\nAsk where you'll land this month, which deals threaten the forecast, what changed in your pipeline, which reps need coaching, which customers need attention, and why you're winning or losing. Follow up to examine individual deals, supporting activity, and the reasoning behind Data Parrot's assessments.\n\nSign in to your paid Data Parrot Pro or Max account with HubSpot connected and MCP access enabled for your user.\n\nRevenue-data access is read-only. This connection cannot edit HubSpot or Data Parrot revenue records. It can access all Data Parrot data in the selected workspace, including synced HubSpot data. HubSpot per-user permissions are not synchronized or enforced.",
+        "developerName": "Data Parrot",
+        "category": "Productivity",
+        "capabilities": [
+          "Sales forecasting",
+          "Deal health and forecast risk",
+          "Pipeline analysis",
+          "Sales activity and coaching",
+          "Customer health",
+          "Win/loss analysis"
+        ],
+        "websiteURL": "https://dataparrot.ai",
+        "supportURL": "https://dataparrot.ai/docs/support",
+        "privacyPolicyURL": "https://dataparrot.ai/privacy-policy",
+        "termsOfServiceURL": "https://dataparrot.ai/terms-of-use",
+        "defaultPrompt": [
+          "Which deals put this month's forecast at risk?",
+          "What grew or shrank our pipeline this quarter, and which deals caused the change?",
+          "Why are we winning and losing?"
+        ],
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}
