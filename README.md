@@ -136,7 +136,7 @@ For other clients, see the [custom connection guide](https://dataparrot.ai/docs/
 
 Revenue-data access is read-only. Data Parrot MCP cannot edit revenue records in Data Parrot or HubSpot.
 
-Connection setup has separate effects. Selecting or switching a workspace changes the connection binding. Requesting workspace access records a request and attempts to notify workspace administrators. Choose the workspace yourself and request access only when you intend to do so.
+Connection setup has separate effects. Selecting or switching a workspace changes the connection binding. Choose the workspace yourself.
 
 ### Verify the connection
 
@@ -146,7 +146,7 @@ Check that Data Parrot tools are available. If workspace access is unclear, ask 
 
 Confirm that the client actually called a Data Parrot business tool successfully and used the intended workspace and period. A chat answer alone is not proof of a connection. If the workspace has no applicable data, the answer should say so. Review important conclusions before acting on them.
 
-If sign-in succeeds but revenue tools are unavailable, check the returned access status: membership, paid-plan eligibility, the HubSpot connection, MCP access for your user, or workspace selection may need attention. Follow the returned setup guidance; do not change permissions or send access requests automatically.
+If sign-in succeeds but revenue tools are unavailable, check the returned access status: membership, paid-plan eligibility, the HubSpot connection, MCP access for your user, or workspace selection may need attention. Follow the returned setup guidance. If membership is missing, ask your Data Parrot admin to invite you.
 
 **Validation status:** the installation instructions have been checked against provider documentation. Client installation, authenticated OAuth, workspace access, token refresh, and successful business-tool execution have not been tested as part of this package review. See the [installer guide](llms-install.md) for the documentation-check date and version details.
 

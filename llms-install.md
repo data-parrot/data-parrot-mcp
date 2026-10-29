@@ -30,7 +30,7 @@ Use this guide to connect an AI client to Data Parrot's hosted MCP server. There
 
 Revenue-data access is read-only. Data Parrot MCP cannot edit revenue records in Data Parrot or HubSpot.
 
-Selecting or switching a workspace changes the connection binding. Requesting access records a request and attempts to notify workspace administrators. Do not choose a workspace for the user or automatically request access.
+Selecting or switching a workspace changes the connection binding. Do not choose a workspace for the user.
 
 ## Before changing client settings
 
@@ -245,7 +245,7 @@ For a client not listed here, check its current official documentation for nativ
 4. Ask: **Where will we land this month?**
 5. Verify an actual successful Data Parrot business-tool call, the selected workspace, and the intended month. Do not claim success based only on generated chat text. Report an empty eligible dataset honestly.
 
-Handle restricted access using the returned status and setup link. A valid login may still require membership, a Pro/Max workspace, a usable HubSpot connection, administrator-enabled MCP access, or workspace selection. Explain the next action to the user. Do not upgrade plans, change permissions, switch workspaces, reset bindings, or invoke `request_data_parrot_access` automatically.
+Handle restricted access using the returned status and setup link. A valid login may still require membership, a Pro/Max workspace, a usable HubSpot connection, administrator-enabled MCP access, or workspace selection. Explain the next action to the user. If membership is missing, ask them to contact their Data Parrot admin for an invitation. Do not upgrade plans, change permissions, switch workspaces, or reset bindings automatically.
 
 If login cannot be completed, report configuration as prepared and authentication as pending. Do not extract credentials from another client to complete the test.
 
