@@ -1,0 +1,20 @@
+{
+  "name": "data-parrot-local",
+  "interface": {
+    "displayName": "Data Parrot Local"
+  },
+  "plugins": [
+    {
+      "name": "data-parrot",
+      "source": {
+        "source": "local",
+        "path": "./plugins/openai"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
