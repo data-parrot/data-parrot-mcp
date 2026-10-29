@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "data-parrot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Data Parrot brings AI revenue analysis of your HubSpot data into your AI tools.",
   "author": {
     "name": "Data Parrot",
