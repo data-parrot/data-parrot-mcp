@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "data-parrot",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Data Parrot brings AI revenue analysis of your HubSpot data into your AI tools.",
   "author": {
     "name": "Data Parrot",
@@ -25,7 +25,7 @@
         "shortDescription": "AI revenue analyst for HubSpot",
         "longDescription": "Data Parrot is a sales analytics assistant for HubSpot. It brings AI revenue analysis of your HubSpot data into ChatGPT so you can review your forecast, investigate at-risk deals, and understand pipeline changes through conversation.\n\nBuilt for CEOs, chief revenue officers, VPs of Sales, sales managers, revenue operations teams, and account executives at companies that use HubSpot.\n\nUse analysis Data Parrot has already completed across deals, customers, sales activity, forecasts, and win/loss to answer your revenue questions.\n\nAsk where you'll land this month, which deals threaten the forecast, what changed in your pipeline, which reps need coaching, which customers need attention, and why you're winning or losing. Follow up to examine individual deals, supporting activity, and the reasoning behind Data Parrot's assessments.\n\nRequires an existing Data Parrot account.\n\nRevenue-data access is read-only. This connection cannot edit revenue records in Data Parrot or HubSpot.",
         "developerName": "Data Parrot",
-        "category": "Data & Analytics",
+        "category": "Business & Operations",
         "capabilities": [
           "Sales forecasting",
           "Deal health and forecast risk",
