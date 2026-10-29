@@ -3,17 +3,7 @@
   "mcpServers": {
     "data-parrot": {
       "type": "streamable-http",
-      "url": "https://api-v3.dataparrot.ai/api/v3/data-parrot/mcp",
-      "extensions": {
-        "com.openai": {
-          "auth": {
-            "type": "oauth",
-            "client": {
-              "mode": "dcr"
-            }
-          }
-        }
-      }
+      "url": "https://api-v3.dataparrot.ai/api/v3/data-parrot/mcp"
     }
   }
 }

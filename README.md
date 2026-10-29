@@ -134,7 +134,7 @@ For other clients, see the [custom connection guide](https://dataparrot.ai/docs/
 
 ## Permissions and verification
 
-Revenue-data access is read-only: Data Parrot MCP cannot edit HubSpot or Data Parrot revenue records. The connection can access all Data Parrot data in the selected workspace, including synced HubSpot data; **HubSpot per-user permissions are not synchronized or enforced through MCP**.
+Revenue-data access is read-only. Data Parrot MCP cannot edit revenue records in Data Parrot or HubSpot.
 
 Connection setup has separate effects. Selecting or switching a workspace changes the connection binding. Requesting workspace access records a request and attempts to notify workspace administrators. Choose the workspace yourself and request access only when you intend to do so.
 

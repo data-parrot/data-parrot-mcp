@@ -28,7 +28,7 @@ Use this guide to connect an AI client to Data Parrot's hosted MCP server. There
 - Access: a connected HubSpot account, a Data Parrot Pro or Max workspace, workspace membership, and MCP enabled for the user
 - Client permission: the AI client or organization must allow this remote connection
 
-Revenue data is read-only. The connection can access all Data Parrot data in the selected workspace, including synced HubSpot data. HubSpot per-user permissions are not synchronized or enforced through MCP.
+Revenue-data access is read-only. Data Parrot MCP cannot edit revenue records in Data Parrot or HubSpot.
 
 Selecting or switching a workspace changes the connection binding. Requesting access records a request and attempts to notify workspace administrators. Do not choose a workspace for the user or automatically request access.
 
