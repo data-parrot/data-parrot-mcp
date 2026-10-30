@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "data-parrot",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Data Parrot brings AI revenue analysis of your HubSpot data into your AI tools.",
   "author": {
     "name": "Data Parrot",
@@ -45,6 +45,59 @@
         ],
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Review Commit deals",
+              "prompt": "Which Commit deals deserve a closer look this quarter, and why?",
+              "tools_triggered": "get_deals, get_deal",
+              "expected_behavior": "1. Compares the seller’s Commit status with Data Parrot’s assessment and summarizes the deals needing attention by count and value.\n2. Names the relevant deals and owners, with evidence explaining the concerns.\n3. Suggests what to verify or do next, distinguishing assessed risk from confirmed outcomes."
+            },
+            {
+              "description": "Identify where leadership can help",
+              "prompt": "Which three deals would benefit most from my involvement this week, and what should I do?",
+              "tools_triggered": "get_deals, get_deal",
+              "expected_behavior": "1. Selects three open deals and identifies their owners.\n2. Explains the specific blocker or unfinished action on each, supported by recorded evidence.\n3. Recommends a concrete leadership action for each deal, distinguishing missing approval from follow-through on an existing agreement."
+            },
+            {
+              "description": "Find unanswered outreach",
+              "prompt": "Which of our largest open deals have repeated outreach but no recorded buyer response in the last 30 days?",
+              "tools_triggered": "get_deals, get_engagements",
+              "expected_behavior": "1. States the outreach threshold and date window used, and summarizes matching deals by count and value.\n2. Names the largest matching deals and their owners, with supporting activity dates or evidence.\n3. Checks recorded replies, meetings, connected calls and other communications; describes the result as no recorded response rather than proof the buyer has not responded."
+            },
+            {
+              "description": "Explain pipeline changes",
+              "prompt": "What grew or shrank our pipeline this quarter, and which deals caused the change?",
+              "tools_triggered": "get_pipeline_history, expand_result",
+              "expected_behavior": "1. States which pipelines and dates it analyzed, including any limits on available history.\n2. Shows starting and ending pipeline values and explains the changes between them, including new opportunities, wins, losses and value changes where recorded.\n3. Names the deals contributing most to the increases and decreases."
+            },
+            {
+              "description": "Explain losses and recommend improvements",
+              "prompt": "Why did we lose deals last quarter, and what should we change?",
+              "tools_triggered": "get_win_loss, expand_result",
+              "expected_behavior": "1. Summarizes the main loss reasons by lost deal value and count.\n2. Supports the findings with named deals and recorded evidence, and says when the reason is unknown.\n3. Recommends practical changes tied to those findings, distinguishing evidence from interpretation."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Update a HubSpot deal. Data Parrot cannot update deal records.",
+              "prompt": "Use Data Parrot to mark our largest open deal as Closed Won.",
+              "expected_behavior": "Explains that Data Parrot cannot update deal records. Does not perform or claim the update through Data Parrot. Any alternative write capability is treated separately."
+            },
+            {
+              "description": "Send email. Data Parrot cannot send email.",
+              "prompt": "Use Data Parrot to email each sales rep and ask them to update their deals before tomorrow’s pipeline review.",
+              "expected_behavior": "Explains that Data Parrot cannot send email. Does not use Data Parrot to send messages or claim it sent anything. May offer to draft the message or use a separately authorized email capability."
+            },
+            {
+              "description": "Answer a weather forecast. Weather is outside Data Parrot’s revenue-analysis functionality.",
+              "prompt": "What’s the weather forecast for Toronto this weekend?",
+              "expected_behavior": "Does not invoke Data Parrot for weather. Uses an appropriate weather capability if available, or explains that Data Parrot provides revenue analysis rather than weather forecasts."
+            }
+          ]
+        }
       }
     }
   }
