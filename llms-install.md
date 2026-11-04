@@ -10,9 +10,7 @@ Use this guide to connect an AI client to Data Parrot's hosted MCP server. There
 | --- | --- |
 | Claude.ai / Claude Desktop | [Custom connector](#claudeai--claude-desktop) |
 | Claude Code | [Native HTTP connection](#claude-code) |
-| ChatGPT | [Developer mode connection](#chatgpt) |
-| Codex app | [Desktop MCP settings](#codex-app) |
-| Codex CLI | [Terminal setup](#codex-cli) |
+| ChatGPT | [Plugin directory install](#chatgpt) |
 | Cursor | [Native remote connection](#cursor) |
 | Grok.com | [Custom connector](#grokcom) |
 | Grok CLI | [Terminal setup](#grok-cli) |
@@ -68,51 +66,16 @@ Sources: [Claude Code MCP reference](https://code.claude.com/docs/en/mcp) · [Da
 
 ## ChatGPT
 
-1. In ChatGPT web, open **Settings → Security and login** and enable **Developer mode**. Availability depends on the account and workspace policy; an administrator may need to enable access.
-2. Open [ChatGPT Plugins](https://chatgpt.com/plugins), inspect existing connections, and select **+** if Data Parrot is absent.
-3. Enter **Data Parrot** and the description: **Data Parrot brings AI revenue analysis of your HubSpot data into your AI tools.** Under **Connection**, use the public HTTPS endpoint above.
-4. Use OAuth if the form asks for an authentication method. Leave optional OAuth client credentials unset, create the connection, and complete Data Parrot browser sign-in.
-5. Review the discovered tools. Start a conversation, add Data Parrot from the tools menu, and [verify a real call](#check-access-and-verify-a-real-call).
+Data Parrot is an approved plugin in the ChatGPT plugin directory. Developer mode and a custom MCP connection are no longer required.
 
-This configures a personal or workspace-authorized custom connection; it does not require a public Data Parrot directory listing. Do not publish a workspace-wide connection as an incidental setup step.
+1. Open the [Data Parrot plugin listing](https://chatgpt.com/plugins/plugin_asdk_app_6ae3b84b242c8191a21dba8a5cf62b91), or open **Plugins** in the ChatGPT sidebar (web, desktop, or mobile) and search for Data Parrot. If Data Parrot already appears under **Installed**, reuse it.
+2. Select **Install plugin**. If the button is missing or the listing says **Disabled by admin**, a ChatGPT workspace administrator must make the plugin available under **Workspace settings → Plugins**.
+3. Select **Connect** and complete Data Parrot browser sign-in. If your login has access to more than one company, choose the one ChatGPT should use.
+4. Start a conversation, mention **@Data Parrot** or select it from the **+** menu, and [verify a real call](#check-access-and-verify-a-real-call).
 
-Sources: [OpenAI's current connection guide](https://developers.openai.com/plugins/deploy/connect-chatgpt) · [Data Parrot ChatGPT guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-chatgpt).
+The listing installs the hosted Data Parrot MCP server (`data-parrot`). Do not add a duplicate custom MCP connection to the same endpoint.
 
-## Codex app
-
-1. Open **Settings** and locate **MCP servers**. In versions with the older settings layout, this is under **Plugins → MCPs**.
-2. Reuse an existing Data Parrot connection; otherwise select **Add server**, enter `data-parrot`, choose **Streamable HTTP**, and paste the endpoint above.
-3. Save, restart the connection when prompted, and select **Authenticate** to complete browser sign-in.
-4. Enter `/mcp` in a conversation and [verify a real call](#check-access-and-verify-a-real-call).
-
-OpenAI's current MCP reference labels the desktop setup as ChatGPT desktop. The shared local configuration remains `~/.codex/config.toml` by default. The app and Codex CLI do not need separate entries when using the same configuration home.
-
-Sources: [OpenAI's desktop MCP reference](https://learn.chatgpt.com/docs/extend/mcp) · [Data Parrot Codex app guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-the-codex-app).
-
-## Codex CLI
-
-Inspect `codex mcp list` first. If Data Parrot is absent, run:
-
-```bash
-codex mcp add data-parrot --url https://api-v3.dataparrot.ai/api/v3/data-parrot/mcp
-```
-
-Complete sign-in if the add command starts it. If authentication is still required, run:
-
-```bash
-codex mcp login data-parrot
-```
-
-Alternatively, merge this into the active user configuration, normally `~/.codex/config.toml`, and use the login command above:
-
-```toml
-[mcp_servers.data-parrot]
-url = "https://api-v3.dataparrot.ai/api/v3/data-parrot/mcp"
-```
-
-Use one configuration method. Open Codex and check `/mcp`, then [verify a real call](#check-access-and-verify-a-real-call). For a Mac authentication failure, consult the [Data Parrot Mac troubleshooting guide](https://dataparrot.ai/docs/mcp/connect/codex-macos-workaround); do not apply certificate or OAuth overrides preemptively.
-
-Sources: [OpenAI's MCP configuration and OAuth reference](https://learn.chatgpt.com/docs/extend/mcp) · [Data Parrot Codex CLI guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-codex-cli).
+ChatGPT directory steps checked November 3, 2026 against OpenAI's plugins help article. Sources: [Plugins in ChatGPT](https://help.openai.com/en/articles/20001256-plugins-in-chatgpt) · [Data Parrot ChatGPT guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-chatgpt).
 
 ## Cursor
 
@@ -258,7 +221,6 @@ Only remove a connection when the user requests it. Preserve all unrelated confi
 - Claude.ai/Desktop: use the connector's **Remove** control in **Customize → Connectors**.
 - Claude Code: `claude mcp remove data-parrot --scope user` for the user-level entry created above.
 - ChatGPT: open the connection in **Plugins** and use its disconnect/remove control.
-- Codex app/CLI: remove the server in MCP settings or use `codex mcp remove data-parrot`. With shared local configuration, this affects both clients.
 - Cursor: remove only the direct `data-parrot` entry from the configuration file you edited; manage a plugin-provided connection through that plugin's controls.
 - Grok.com: open the connector's management controls and disconnect/remove it.
 - Grok CLI: `grok mcp remove data-parrot`.

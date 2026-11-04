@@ -121,9 +121,7 @@ Choose your client and follow its setup guide. Client versions, account plans, a
 | --- | --- | --- |
 | Claude.ai / Claude Desktop | Add a custom connector, then sign in and enable it in your conversation. | [Claude connector guide](https://dataparrot.ai/docs/mcp/connect/anthropic#connect-the-data-parrot-mcp-server-to-claudeai-or-claude-desktop) |
 | Claude Code | Add the HTTP server from your terminal, then authenticate in Claude Code. | [Claude Code guide](https://dataparrot.ai/docs/mcp/connect/anthropic#connect-the-data-parrot-mcp-server-to-claude-code) |
-| ChatGPT | Add the remote connection through Developer mode and choose OAuth. | [ChatGPT guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-chatgpt) |
-| Codex app | Add a Streamable HTTP server in MCP settings, then authenticate. | [Codex app guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-the-codex-app) |
-| Codex CLI | Add the remote server and complete browser sign-in; reuse the app connection if already configured. | [Codex CLI guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-codex-cli) |
+| ChatGPT | Install the Data Parrot plugin from the ChatGPT plugin directory, then sign in. | [ChatGPT guide](https://dataparrot.ai/docs/mcp/connect/openai#connect-the-data-parrot-mcp-server-to-chatgpt) |
 | Cursor | Install the separate Data Parrot plugin from GitHub, then authenticate. | [Cursor guide](https://dataparrot.ai/docs/mcp/connect/cursor#connect-data-parrot-to-cursor) |
 | Grok.com | Add a custom connector from the Connectors page, then sign in. | [Grok.com guide](https://dataparrot.ai/docs/mcp/connect/xai#connect-the-data-parrot-mcp-server-to-grokcom) |
 | Grok CLI | Add the HTTP server, then authenticate from the MCP Servers menu. | [Grok CLI guide](https://dataparrot.ai/docs/mcp/connect/xai#connect-the-data-parrot-mcp-server-to-grok-cli) |
