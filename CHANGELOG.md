@@ -2,6 +2,14 @@
 
 # Data Parrot MCP changelog
 
+## [2026-11-03](https://dataparrot.ai/docs/changelog/2026-11-03-chatgpt-plugin)
+
+Install Data Parrot from the ChatGPT plugin directory to use the Data Parrot MCP Server in ChatGPT without a custom connection.
+
+## [2026-10-30](https://dataparrot.ai/docs/changelog/2026-10-30-mcp-connection-fix)
+
+Fixed an issue that prevented some existing Data Parrot users from connecting through the MCP server.
+
 ## [2026-10-20](https://dataparrot.ai/docs/changelog/2026-10-20-mcp-forecast-notes)
 
 Retrieve Forecast Notes with Deal details and Forecast Status, including saved note history on request. Forecast summaries now include won actuals when comparing revenue and commitments against existing goals.
